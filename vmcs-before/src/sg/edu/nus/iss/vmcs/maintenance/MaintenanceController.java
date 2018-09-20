@@ -152,13 +152,15 @@ public class MaintenanceController {
 
         if (ds == false) {
             MessageDialog msg =
-                new MessageDialog(
-                    mpanel,
-                    "Please Lock the Door before You Leave");
+                    new MessageDialog(
+                            mpanel,
+                            "Please Lock the Door before You Leave");
             msg.setLocation(500, 500);
             return;
         }
 
+        mpanel.initCollectCash();
+        mpanel.initTotalCash();
         mpanel.setActive(MaintenancePanel.DIALOG, true);
 
     }
