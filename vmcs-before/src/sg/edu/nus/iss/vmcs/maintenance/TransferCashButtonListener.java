@@ -18,12 +18,15 @@ import java.awt.event.ActionEvent;
  * @author Olivo Miotto, Pang Ping Li
  */
 
-public class TransferCashButtonListener implements ActionListener {
-    private MaintenanceController mctrl;
-    public TransferCashButtonListener(MaintenanceController mc) {
+public class TotalCashButtonListener implements ActionListener {
+    MaintenanceController mctrl;
+
+    public TotalCashButtonListener(MaintenanceController mc) {
         mctrl = mc;
     }
     public void actionPerformed(ActionEvent e) {
-        mctrl.transferAll();
+        mctrl.getTotalCash();
+        mctrl.getTotalCoin();
+        mctrl.displayCoin();
     }
 }
